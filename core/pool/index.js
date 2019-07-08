@@ -8,11 +8,11 @@ export default class Pool {
   }
 
   static addReact(config){
-    Pool.apps.push({ adapter: adapters['react'], config })
+    Pool.add('react', config)
   }
 
   static addVue(config){
-    Pool.apps.push({ adapter: adapters['vue'], config })
+    Pool.add('vue', config)
   }
 
   static start(){
