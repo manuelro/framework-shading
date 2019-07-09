@@ -1,3 +1,3 @@
 export default {
-  name: 'Manu'
+  greeting: 'Hello World from React!'
 }

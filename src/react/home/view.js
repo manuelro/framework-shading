@@ -1,8 +1,8 @@
 import Button from './Button'
 
-export default React => (
+export default (React, model) => (
   <div>
-    <h1>Hello World from React!</h1>
+    <h1>{model.greeting}</h1>
     <Button/>
   </div>
 )
