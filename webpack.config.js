@@ -6,7 +6,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
   mode: 'development',
   entry: {
-    'index': './index.js',
+    'index': './index.js'
   },
   output: {
     publicPath: '/dist/',
@@ -26,6 +26,15 @@ module.exports = {
         test: /\.vue$/,
         use: 'vue-loader'
       },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.html$/,
+        use: 'raw-loader'
+      }
     ],
   },
   node: {
@@ -33,6 +42,7 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve(__dirname, 'node_modules')],
+    extensions: [ '.tsx', '.ts', '.js' ]
   },
   plugins: [
     new CleanWebpackPlugin.CleanWebpackPlugin(),

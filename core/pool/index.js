@@ -15,6 +15,10 @@ export default class Pool {
     Pool.add('vue', config)
   }
 
+  static addAngular(config){
+    Pool.add('angular', config)
+  }
+
   static start(){
     for (let app of Pool.apps) {
       app.adapter(app.config)
