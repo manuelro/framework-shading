@@ -1,3 +1,3 @@
 export default {
-  greeting: 'Hello World from Vue!'
+  greeting: 'Hello World from Vue!!!!'
 }
